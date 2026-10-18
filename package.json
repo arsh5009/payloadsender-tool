@@ -1,0 +1,16 @@
+{
+  "name": "netpayload-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NetPayload (MERN): send a file to a device on your network over TCP/UDP from the browser.",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "test": "npm test --prefix server && npm test --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
