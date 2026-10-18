@@ -11,6 +11,7 @@
     "test": "npm test --prefix server && npm test --prefix client"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "vite": "^8.3.4"
   }
 }
