@@ -1,5 +1,5 @@
 {
-  "installCommand": "npm run install:all",
-  "buildCommand": "npm run build",
+  "installCommand": "npm ci --prefix client",
+  "buildCommand": "npm run build --prefix client",
   "outputDirectory": "client/dist"
 }
