@@ -116,21 +116,8 @@ export default function App() {
     <div className="app">
       <header className="topbar">
         <button type="button" className="icon-btn" onClick={() => setPanel('profiles')} aria-label="Saved profiles"><Icon name="bookmark" /></button>
-        <div className="brand">
-          <h1>NetPayload</h1>
-          <p>Local network file transfer</p>
-        </div>
-        <div className="topbar-actions">
-          <div className="system-status" aria-label="Service status">
-            <span className={`status-chip ${serverDown ? 'offline' : config ? 'online' : 'checking'}`}>
-              <i />{serverDown ? 'API offline' : config ? 'API online' : 'Connecting'}
-            </span>
-            {config && <span className={`status-chip ${config.db ? 'online' : 'neutral'}`}>
-              <i />DB {config.db ? 'connected' : 'offline'}
-            </span>}
-          </div>
-          <button type="button" className="icon-btn" onClick={() => { setPanel('history'); refreshHistory(); }} aria-label="Transfer history"><Icon name="clock" /></button>
-        </div>
+        <h1>NetPayload</h1>
+        <button type="button" className="icon-btn" onClick={() => { setPanel('history'); refreshHistory(); }} aria-label="Transfer history"><Icon name="clock" /></button>
       </header>
 
       <main className="column">

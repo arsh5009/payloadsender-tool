@@ -41,6 +41,14 @@ const server = app.listen(config.port, config.host, () => {
     console.warn('WARNING: the server is reachable from your network and ACCESS_PIN is not set.');
   }
 });
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`Port ${config.port} is already in use. Stop the other NetPayload server (Ctrl+C in its terminal), or set a different PORT in server/.env and restart.`);
+  } else {
+    console.error('NetPayload server failed to start:', err);
+  }
+  process.exit(1);
+});
 
 function shutdown() {
   manager.shutdown();
