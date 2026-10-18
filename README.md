@@ -1,4 +1,4 @@
-# NetPayload (MERN, runs in the browser)
+# NetPayload (Runs in the browser)
 
 Send a file to a device on your local network by IP address and port, over TCP or UDP, from a web page.
 
